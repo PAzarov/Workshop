@@ -5,7 +5,7 @@ for i in range(n+1):
                 s += str(j)
         print (s)
 
-    n = int(input())
+n = int(input())
 def nextFib(lastfib):
         buff = lastfib[1]
         lastfib[1] = lastfib[0] + lastfib[1]
@@ -56,6 +56,5 @@ def fibSum(n, k):
         return sum - 1
     if n >= 3:
         return sum - 3
-
 
 print(fibSum(n, k))
