@@ -24,8 +24,8 @@ def operation():
     res=f"= {calc}"
     lbl.configure(text=res)
 
-def clicked():                                                                  # Функция для вывода сообщения
-    rbutton=var.get()                                                           # в воответствии с нажатым Radiobutton
+def clicked():                                                                  
+    rbutton=var.get()                                                          
     if rbutton==1:
         text="первый"
     elif rbutton==2:
@@ -40,8 +40,8 @@ def open_file():
 
 
 root=Tk()                                                                         
-root.title("Кустов Александр Викторович")                                       # Заголовок для окна программы
-root.geometry('360x240')                                                        # Размер окна по умолчанию
+root.title("Кустов Александр Викторович")                                      
+root.geometry('360x240')                                                        
 
 menu=Menu(root)
 new_item=Menu(menu, tearoff=0)
@@ -49,14 +49,14 @@ new_item.add_command(label='Открыть файл', command=open_file)
 menu.add_cascade(label='Файл', menu=new_item)
 root.config(menu=menu)
 
-tab_control=ttk.Notebook(root)                                                  # Объявление создания вкладок
-tab1=ttk.Frame(tab_control)                                                     #
-tab2=ttk.Frame(tab_control)                                                     # Создание вкладок
-tab3=ttk.Frame(tab_control)                                                     #
+tab_control=ttk.Notebook(root)                                                  
+tab1=ttk.Frame(tab_control)                                                     
+tab2=ttk.Frame(tab_control)                                                     
+tab3=ttk.Frame(tab_control)                                                     
 
-tab_control.add(tab1, text='Первая')                                           #
-tab_control.add(tab2, text='Вторая')                                           # Добавление вкладок на экран
-tab_control.add(tab3, text='Третья')                                           #
+tab_control.add(tab1, text='Первая')                                           
+tab_control.add(tab2, text='Вторая')                                           
+tab_control.add(tab3, text='Третья')                                           
 
 
 # frame 1
@@ -64,7 +64,7 @@ f_int=Entry(tab1, width=4)
 s_int=Entry(tab1, width=4)
 combo=Combobox(tab1, width=2)
 combo['values'] = ('+', '-', '*', '/')
-combo.current(0)                                                               # Вариант по умолчанию
+combo.current(0)                                                               
 lbl=Label(tab1, text='=')
 btn=Button(tab1, text='Вычислить', command=operation)
 f_int.grid(column=1, row=0)
@@ -88,6 +88,6 @@ rad3.grid(column=2, row=0)
 scroll=scrolledtext.ScrolledText(tab3)
 scroll.grid(column=0, row=0)
 
-tab_control.pack(expand=1, fill='both')                                        #Отображение всех вкладок
+tab_control.pack(expand=1, fill='both')                                       
 
 root.mainloop()
