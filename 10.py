@@ -40,7 +40,7 @@ def open_file():
 
 
 root=Tk()                                                                         
-root.title("Кустов Александр Викторович")                                      
+root.title("Азаров Павел Сергеевич")                                      
 root.geometry('360x240')                                                        
 
 menu=Menu(root)
